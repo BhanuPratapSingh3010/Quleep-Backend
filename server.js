@@ -1,7 +1,9 @@
 const express= require('express');
 const app=express();
 const cors=require('cors');
-app.use(cors());
+app.use(cors({
+    origin: 'https://quleep.vercel.app',
+}));
 app.use(express.json());
 const port=5000;
 const connection=require('./db');
